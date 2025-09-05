@@ -1,209 +1,214 @@
 <!doctype html>
-<html lang="en" dir="ltr">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Nova Coin (NVC) — Official Website</title>
-  <meta name="description" content="Official website of Nova Coin (NVC) on BNB Smart Chain. Transparent, community-driven token. View contract, tokenomics, roadmap, and official links." />
-  <meta name="theme-color" content="#0b0f13" />
+  <meta name="description" content="Nova Coin (NVC) — a community-driven, utility focused crypto project. Transparent tokenomics, fair launch, and real world experiments." />
+  <meta name="theme-color" content="#111111" />
   <link rel="icon" href="assets/logo.png" />
-
-  <!-- Open Graph / Twitter -->
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Nova Coin (NVC) — Official Website" />
-  <meta property="og:description" content="Transparent, community-driven token on BNB Smart Chain. Contract, tokenomics, roadmap, and official links." />
-  <meta property="og:image" content="https://novacoin.finance/assets/logo.png" />
-  <meta property="og:url" content="https://novacoin.finance/" />
-  <meta name="twitter:card" content="summary_large_image" />
-
-  <!-- Structured data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Nova Coin (NVC)",
-    "url": "https://novacoin.finance",
-    "logo": "https://novacoin.finance/assets/logo.png",
-    "sameAs": [
-      "https://bscscan.com/token/0x5030113a535f6b94420D34AEf7cfb22e5547210e"
-    ]
-  }
-  </script>
 
   <style>
     :root{
-      --bg:#0b0f13; --bg2:#12161c; --surface:#0f1318cc;
-      --txt:#e9eef5; --muted:#9aa7b5; --line:#ffffff12;
-      --gold:#e7b21a; --gold2:#ffdc6a; --accent:#7aa2ff; --ok:#22c55e; --danger:#ff6161;
-      --radius:18px; --shadow:0 14px 40px rgba(0,0,0,.35);
+      --bg:#0b0f13;
+      --bg2:#12161c;
+      --card:#0f1318cc;
+      --txt:#e9eef5;
+      --muted:#9aa7b5;
+      --gold:#e7b21a;
+      --gold-2:#ffdc6a;
+      --accent:#7aa2ff;
+      --ok:#25d366;
+      --danger:#ff5d5d;
+      --radius:18px;
+      --shadow:0 10px 30px rgba(0,0,0,.35);
     }
+
     *{box-sizing:border-box}
     html,body{height:100%}
     body{
-      margin:0; color:var(--txt);
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans";
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+      color:var(--txt);
       background:
-        radial-gradient(1100px 600px at 75% -10%, rgba(231,178,26,.12), transparent 60%),
-        radial-gradient(900px 500px at 10% 110%, rgba(255,220,106,.08), transparent 60%),
+        radial-gradient(1200px 600px at 70% -10%, rgba(231,178,26,.12), transparent 60%),
+        radial-gradient(900px 500px at 10% 100%, rgba(255,220,106,.08), transparent 60%),
         linear-gradient(180deg, var(--bg), var(--bg2));
       overflow-x:hidden;
     }
-    .container{max-width:1180px; margin:0 auto; padding:24px}
+
+    .container{max-width:1100px; margin:0 auto; padding:24px}
     header{
-      position:sticky; top:0; z-index:30;
+      position:sticky; top:0; z-index:20;
       backdrop-filter: blur(10px);
       background:linear-gradient(180deg, rgba(10,14,18,.75), rgba(10,14,18,.35));
-      border-bottom:1px solid var(--line);
+      border-bottom:1px solid rgba(255,255,255,.06);
     }
-    .nav{display:flex; align-items:center; justify-content:space-between; gap:18px}
-    .brand{display:flex; align-items:center; gap:12px; font-weight:800; letter-spacing:.3px}
-    .brand img{width:36px; height:36px; border-radius:8px; box-shadow:0 0 0 2px rgba(231,178,26,.25)}
-    .brand small{color:var(--muted); font-weight:700}
-    .nav a{color:var(--muted); text-decoration:none; margin:0 10px; font-weight:700; font-size:14px}
+    .nav{display:flex; align-items:center; gap:18px; justify-content:space-between}
+    .brand{display:flex; align-items:center; gap:12px; font-weight:700; letter-spacing:.4px}
+    .brand img{width:36px; height:36px; border-radius:50%; box-shadow:0 0 0 2px rgba(231,178,26,.25)}
+    .brand span{font-size:18px}
+    .nav a{
+      color:var(--muted); text-decoration:none; margin:0 10px; font-weight:600; font-size:14px;
+    }
     .nav a:hover{color:var(--txt)}
     .btn{
       display:inline-flex; align-items:center; justify-content:center; gap:8px;
-      padding:12px 18px; border-radius:12px; border:1px solid var(--line);
-      color:#111; background:linear-gradient(90deg, var(--gold2), var(--gold));
-      font-weight:900; text-decoration:none; box-shadow:var(--shadow); transition:transform .15s ease;
+      padding:12px 18px; border-radius:12px; border:1px solid rgba(255,255,255,.08);
+      color:#111; background:linear-gradient(90deg, var(--gold), var(--gold-2));
+      font-weight:800; text-decoration:none; box-shadow:var(--shadow); transition:transform .15s ease;
     }
     .btn:hover{transform:translateY(-2px)}
-    .btn-outline{background:transparent; color:var(--txt); border-color:#ffffff26}
+    .btn-outline{
+      background:transparent; color:var(--txt); border-color:rgba(255,255,255,.15);
+    }
     .btn-outline:hover{border-color:var(--gold); color:var(--gold)}
-    .mini{font-size:12px; color:var(--muted)}
-    .chip{display:inline-flex; gap:8px; align-items:center; padding:8px 10px; border-radius:10px; border:1px dashed #ffffff26; background:#ffffff08}
 
     /* Hero */
-    .hero{padding:64px 24px 26px}
-    .hero-grid{display:grid; grid-template-columns:1.05fr .95fr; gap:28px; align-items:center}
-    @media (max-width:900px){.hero-grid{grid-template-columns:1fr; text-align:center}}
-    .title{font-size:44px; line-height:1.1; margin:0 0 14px; font-weight:1000}
-    .title .g{
-      background:linear-gradient(90deg, var(--gold2), var(--gold));
+    .hero{padding:64px 24px 32px}
+    .hero-grid{
+      display:grid; grid-template-columns:1.05fr .95fr; gap:28px; align-items:center;
+    }
+    @media (max-width:900px){
+      .hero-grid{grid-template-columns:1fr; text-align:center}
+      .actions{justify-content:center}
+    }
+    .logo-wrap{
+      position:relative; aspect-ratio:1/1; max-width:420px; margin-inline:auto;
+      border-radius:50%;
+      background:radial-gradient(60% 60% at 50% 40%, rgba(231,178,26,.28), rgba(231,178,26,.06));
+      box-shadow:0 30px 80px rgba(231,178,26,.22), inset 0 0 60px rgba(231,178,26,.1);
+      display:grid; place-items:center;
+      animation:float 6s ease-in-out infinite;
+    }
+    .logo-wrap::after{
+      content:""; position:absolute; inset:-20px; border-radius:inherit;
+      background:conic-gradient(from 0deg, rgba(231,178,26,.25), transparent 40%, transparent 60%, rgba(231,178,26,.18) 100%);
+      filter:blur(28px); z-index:-1; opacity:.7;
+    }
+    .logo-wrap img{width:70%; filter:drop-shadow(0 8px 24px rgba(231,178,26,.35))}
+    @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+
+    .title{font-size:40px; line-height:1.1; margin:0 0 12px; font-weight:900}
+    .title .gradient{
+      background:linear-gradient(90deg, var(--gold-2), var(--gold));
       -webkit-background-clip:text; background-clip:text; color:transparent;
       text-shadow:0 10px 30px rgba(231,178,26,.15);
     }
-    .subtitle{color:var(--muted); font-size:17px; max-width:620px}
+    .subtitle{color:var(--muted); font-size:17px; max-width:560px}
     .actions{display:flex; gap:12px; margin-top:22px; flex-wrap:wrap}
-    .stat-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin-top:22px}
-    .card{
-      background:var(--surface); border:1px solid var(--line);
-      border-radius:var(--radius); padding:20px; box-shadow:var(--shadow)
-    }
-    .kpi .key{color:var(--muted); font-size:12px; text-transform:uppercase; letter-spacing:.14em}
-    .kpi .val{font-weight:900; font-size:18px}
-    .dot{width:10px; height:10px; border-radius:50%; background:var(--gold)}
 
-    .logo-wrap{
-      position:relative; aspect-ratio:1/1; max-width:440px; margin-inline:auto;
-      border-radius:24px;
-      background:radial-gradient(60% 60% at 50% 40%, rgba(231,178,26,.25), rgba(231,178,26,.06));
-      box-shadow:0 30px 80px rgba(231,178,26,.22), inset 0 0 60px rgba(231,178,26,.08);
-      display:grid; place-items:center; animation:float 6s ease-in-out infinite;
-    }
-    .logo-wrap img{width:72%; filter:drop-shadow(0 10px 26px rgba(231,178,26,.35))}
-    @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
-
-    /* Sections */
+    /* Cards / sections */
     section{padding:28px 24px}
-    h3{margin:0 0 10px}
-    .grid-2{display:grid; grid-template-columns:1fr 1fr; gap:18px}
-    @media (max-width:900px){.grid-2{grid-template-columns:1fr}}
+    .card{
+      background:var(--card); border:1px solid rgba(255,255,255,.06);
+      border-radius:var(--radius); padding:22px; box-shadow:var(--shadow)
+    }
+    .grid-3{display:grid; grid-template-columns:repeat(3,1fr); gap:18px}
+    @media (max-width:900px){.grid-3{grid-template-columns:1fr}}
 
-    /* Tokenomics pie (decorative) */
+    .kpi{display:flex; align-items:center; gap:12px}
+    .kpi .dot{width:10px; height:10px; border-radius:50%; background:var(--gold)}
+    .kpi .key{color:var(--muted); font-size:12px; text-transform:uppercase; letter-spacing:.12em}
+    .kpi .val{font-weight:800; font-size:18px}
+
+    /* Tokenomics */
+    .tokenomics{display:grid; grid-template-columns: 320px 1fr; gap:26px; align-items:center}
+    @media (max-width:900px){.tokenomics{grid-template-columns:1fr}}
     .pie{
       width:320px; aspect-ratio:1/1; border-radius:50%;
-      background:conic-gradient(var(--gold) 0 60%, #5dd4ff 0 75%, #9b7dff 0 90%, #ff7d7d 0 100%);
-      box-shadow:inset 0 0 40px rgba(255,255,255,.06), 0 20px 60px rgba(0,0,0,.35);
-      position:relative; margin:auto;
+      background:
+        conic-gradient(var(--gold) 0 60%, #5dd4ff 0 75%, #9b7dff 0 90%, #ff7d7d 0 100%);
+      box-shadow:0 20px 60px rgba(0,0,0,.35), inset 0 0 40px rgba(255,255,255,.06);
+      position:relative;
     }
     .pie::after{
       content:"NVC"; position:absolute; inset:22%; border-radius:50%;
       background:radial-gradient(circle at 30% 30%, rgba(255,255,255,.08), rgba(0,0,0,.25));
-      display:grid; place-items:center; color:#ffd76d; font-weight:1000; font-size:28px;
+      display:grid; place-items:center; color:#ffd76d; font-weight:900; font-size:28px;
       text-shadow:0 4px 18px rgba(231,178,26,.35);
     }
-    ul.legend{list-style:none; padding:0; margin:10px 0 0; display:grid; gap:8px}
-    ul.legend li{display:flex; align-items:center; gap:10px; color:var(--muted); font-size:14px}
+    ul.legend{list-style:none; margin:0; padding:0; display:grid; gap:10px}
+    ul.legend li{display:flex; align-items:center; gap:10px; color:var(--muted)}
     ul.legend i{width:12px; height:12px; border-radius:3px; display:inline-block}
     .l1{background:var(--gold)} .l2{background:#5dd4ff} .l3{background:#9b7dff} .l4{background:#ff7d7d}
 
-    /* Trust row */
-    .trust{display:grid; grid-template-columns:repeat(3,1fr); gap:14px}
-    @media (max-width:900px){.trust{grid-template-columns:1fr}}
-    .trust .ok{color:#86efac}
-    .trust a{color:var(--txt); text-decoration:none}
-    .trust a:hover{color:var(--gold)}
-
+    /* Timeline */
+    .timeline{position:relative; padding-left:16px}
+    .timeline::before{content:""; position:absolute; left:6px; top:0; bottom:0; width:2px; background:rgba(255,255,255,.08)}
+    .step{position:relative; margin:12px 0 18px; padding-left:18px}
+    .step::before{
+      content:""; position:absolute; left:-2px; top:4px; width:10px; height:10px; border-radius:50%;
+      background:var(--gold); box-shadow:0 0 0 4px rgba(231,178,26,.15);
+    }
+    .step h4{margin:0 0 4px}
+    .muted{color:var(--muted)}
     footer{padding:40px 24px; color:var(--muted); text-align:center}
     .copy{
       display:inline-flex; gap:8px; align-items:center; padding:10px 12px; border-radius:10px;
-      border:1px dashed #ffffff2b; user-select:all; font-family:ui-monospace, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+      border:1px dashed rgba(255,255,255,.15); user-select:all; font-family:ui-monospace, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
     }
+    .mini{font-size:12px; color:var(--muted)}
+
+    /* Twitter button */
+    .btn-twitter{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:12px 16px; border-radius:12px; border:1px solid rgba(255,255,255,.1);
+      color:#111; background:#fff; font-weight:800; text-decoration:none;
+    }
+    .btn-twitter svg{width:18px; height:18px}
   </style>
 </head>
 <body>
 
-  <!-- Header -->
   <header>
     <div class="container nav">
       <div class="brand">
         <img src="assets/logo.png" alt="NVC logo" />
-        <span>NOVA COIN <small>(NVC)</small></span>
+        <span>NOVA COIN <small style="color:var(--muted); font-weight:600;">(NVC)</small></span>
       </div>
       <nav>
         <a href="#about">About</a>
         <a href="#tokenomics">Tokenomics</a>
-        <a href="#trust">Transparency</a>
-        <a href="#community">Community</a>
+        <a href="#roadmap">Roadmap</a>
+        <a href="#links">Links</a>
       </nav>
     </div>
   </header>
 
-  <!-- Hero -->
   <main class="container hero">
     <div class="hero-grid">
       <div>
-        <h1 class="title">A new spark in <span class="g">decentralized finance</span></h1>
-        <p class="subtitle">
-          Nova Coin (NVC) is a transparent, community-driven token on the <b>BNB Smart Chain</b> with a clean UX and practical utilities.
-          <br><span class="mini">الموقع الرسمي لعملة نوفا كوين</span>
-        </p>
+        <h1 class="title">A new spark in <span class="gradient">decentralized finance</span></h1>
+        <p class="subtitle">Nova Coin (NVC) is a community-driven experiment focused on utility, transparency, and clean UX.</p>
         <div class="actions">
-          <a class="btn" href="#community">Join Community</a>
-          <a class="btn btn-outline" href="https://bscscan.com/token/0x5030113a535f6b94420D34AEf7cfb22e5547210e" target="_blank" rel="noopener">View on BscScan</a>
+          <a class="btn" href="#links">Join Community</a>
+          <a class="btn btn-outline" href="#tokenomics">View Tokenomics</a>
         </div>
 
-        <div class="stat-grid">
-          <div class="card kpi">
-            <div class="key">Status</div>
-            <div class="val">Live</div>
-          </div>
-          <div class="card kpi">
-            <div class="key">Chain</div>
-            <div class="val">BNB Smart Chain (BSC)</div>
-          </div>
-          <div class="card kpi">
-            <div class="key">Supply</div>
-            <div class="val">1,000,000 NVC</div>
-          </div>
-        </div>
-
-        <section style="padding:0; margin-top:16px">
-          <div class="card">
-            <div class="mini" style="margin-bottom:6px; text-transform:uppercase; letter-spacing:.16em; color:#a7b3c2;">Contract</div>
-            <div class="actions" style="gap:8px; flex-wrap:wrap">
-              <span class="copy" title="contract address">
-                <span id="contractAddress">0x5030113a535f6b94420D34AEf7cfb22e5547210e</span>
-                <button id="copyBtn" class="btn btn-outline" style="padding:8px 10px; font-size:12px">Copy</button>
-              </span>
-              <button class="btn btn-outline" id="addToWallet" style="padding:8px 12px; font-size:12px">Add to MetaMask</button>
-              <a class="btn btn-outline" style="padding:8px 12px; font-size:12px"
-                 href="https://bscscan.com/token/0x5030113a535f6b94420D34AEf7cfb22e5547210e#code" target="_blank" rel="noopener">
-                 Verified Source
-              </a>
+        <section style="padding:0; margin-top:22px">
+          <div class="grid-3">
+            <div class="card kpi">
+              <span class="dot"></span>
+              <div>
+                <div class="key">Status</div>
+                <div class="val">Pre-launch</div>
+              </div>
             </div>
-            <div class="mini" style="margin-top:8px">Symbol: <b>NVC</b> • Decimals: <b>18</b></div>
+            <div class="card kpi">
+              <span class="dot"></span>
+              <div>
+                <div class="key">Chain</div>
+                <div class="val">TBA</div>
+              </div>
+            </div>
+            <div class="card kpi">
+              <span class="dot"></span>
+              <div>
+                <div class="key">Contract</div>
+                <div class="val"><span id="addr-mini">0x… (soon)</span></div>
+              </div>
+            </div>
           </div>
         </section>
       </div>
@@ -214,125 +219,92 @@
     </div>
   </main>
 
-  <!-- About -->
   <section id="about" class="container">
     <div class="card">
-      <h3 style="margin-top:0">About Nova Coin</h3>
-      <p class="mini" style="font-size:15px; color:var(--txt)">
-        Nova Coin (NVC) focuses on clarity and execution: fair distribution, clean interfaces, and community-aligned utilities.
-        Our commitment is simple—ship useful things and communicate openly.
+      <h3 style="margin-top:0">What is Nova Coin?</h3>
+      <p class="muted">
+        NVC aims to be a lean, transparent token with real-world-oriented utilities and simple governance.
+        The initial focus is on building a trustworthy brand, launching fairly, and shipping tools the community actually uses.
       </p>
-      <div class="grid-2" style="margin-top:10px">
-        <div class="chip">✅ Transparent contract on BSC</div>
-        <div class="chip">✅ Public website & official links</div>
+      <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:10px">
+        <span class="copy" title="(placeholder) contract address">
+          <span id="addr">0x0000000000000000000000000000000000000000</span>
+          <button id="copyBtn" class="btn btn-outline" style="padding:8px 10px; font-size:12px">Copy</button>
+        </span>
+        <span class="mini">Contract will appear here once deployed.</span>
       </div>
     </div>
   </section>
 
-  <!-- Tokenomics -->
   <section id="tokenomics" class="container">
-    <div class="card" style="display:grid; grid-template-columns: 340px 1fr; gap:24px; align-items:center">
+    <div class="card tokenomics">
+      <div class="pie" aria-label="Tokenomics pie chart"></div>
       <div>
-        <div class="pie" aria-label="Tokenomics chart"></div>
-      </div>
-      <div>
-        <h3 style="margin-top:0">Tokenomics</h3>
+        <h3 style="margin-top:0">Tokenomics (draft)</h3>
         <ul class="legend">
           <li><i class="l1"></i> Liquidity & Market Making — <b>60%</b> (locked)</li>
-          <li><i class="l2"></i> Community Incentives — <b>15%</b></li>
+          <li><i class="l2"></i> Community Incentives — <b>15%</b> (airdrops / quests)</li>
           <li><i class="l3"></i> Treasury & Partnerships — <b>15%</b></li>
-          <li><i class="l4"></i> Core Contributors — <b>10%</b> (vesting)</li>
+          <li><i class="l4"></i> Core Contributors — <b>10%</b> (linear vesting)</li>
         </ul>
-        <p class="mini" style="margin-top:10px">
-          Fixed supply: <b>1,000,000 NVC</b>. All updates to allocations or locks will be announced on this page and social channels.
-        </p>
+        <p class="mini" style="margin-top:10px">Numbers are placeholders and will be finalized before launch.</p>
       </div>
     </div>
   </section>
 
-  <!-- Transparency / Security -->
-  <section id="trust" class="container">
+  <section id="roadmap" class="container">
     <div class="card">
-      <h3 style="margin-top:0">Transparency</h3>
-      <div class="trust" style="margin-top:6px">
-        <div class="card">
-          <div class="mini">Contract</div>
-          <div style="font-weight:900; margin:6px 0" class="ok">Verified on BscScan</div>
-          <a href="https://bscscan.com/token/0x5030113a535f6b94420D34AEf7cfb22e5547210e" target="_blank" rel="noopener">Open BscScan ↗</a>
+      <h3 style="margin-top:0">Roadmap</h3>
+      <div class="timeline">
+        <div class="step">
+          <h4>Phase 1 — Branding & Website</h4>
+          <p class="muted">Logo, domain (<b>novacoin.finance</b>), landing page, socials setup.</p>
         </div>
-        <div class="card">
-          <div class="mini">Liquidity</div>
-          <div style="font-weight:900; margin:6px 0">LP lock details</div>
-          <span class="mini">Lock / unlock tx links will be posted here once executed.</span>
+        <div class="step">
+          <h4>Phase 2 — Smart Contract</h4>
+          <p class="muted">Audit-friendly token contract, public test, fair launch details.</p>
         </div>
-        <div class="card">
-          <div class="mini">Audit & Docs</div>
-          <div style="font-weight:900; margin:6px 0">Documentation</div>
-          <span class="mini">Technical notes and change-logs will be linked from this section.</span>
+        <div class="step">
+          <h4>Phase 3 — Liquidity & Listings</h4>
+          <p class="muted">DEX listing, LP lock, basic analytics, community quests.</p>
+        </div>
+        <div class="step">
+          <h4>Phase 4 — Utilities</h4>
+          <p class="muted">Lightweight tools & integrations guided by community voting.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Community / Links -->
-  <section id="community" class="container">
+  <section id="links" class="container">
     <div class="card">
-      <h3 style="margin-top:0">Community & Contacts</h3>
-      <p class="mini">All official links are always listed here.</p>
+      <h3 style="margin-top:0">Official Links</h3>
+      <p class="muted">All official links will always be listed on this page.</p>
       <div class="actions">
-        <!-- Replace # with your real links -->
-        <a class="btn" href="#" target="_blank" rel="noopener">Telegram</a>
-        <a class="btn btn-outline" href="#" target="_blank" rel="noopener">X (Twitter)</a>
-        <a class="btn btn-outline" href="mailto:hello@novacoin.finance">Email</a>
+        <!-- Twitter only -->
+        <a class="btn-twitter" href="https://twitter.com/NVCC121" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="currentColor">
+            <path d="M22.46 6c-.77.35-1.6.58-2.46.69a4.29 4.29 0 0 0 1.88-2.37 8.59 8.59 0 0 1-2.72 1.04 4.28 4.28 0 0 0-7.3 3.9A12.14 12.14 0 0 1 3.15 4.9a4.27 4.27 0 0 0 1.32 5.71 4.24 4.24 0 0 1-1.94-.54v.05a4.28 4.28 0 0 0 3.43 4.19 4.3 4.3 0 0 1-1.93.07 4.29 4.29 0 0 0 4 2.98A8.6 8.6 0 0 1 2 19.54a12.14 12.14 0 0 0 6.56 1.92c7.87 0 12.18-6.52 12.18-12.17 0-.19 0-.37-.01-.56A8.68 8.68 0 0 0 24 5.56a8.53 8.53 0 0 1-2.54.7z"/>
+          </svg>
+          Twitter
+        </a>
       </div>
     </div>
   </section>
 
   <footer>
     © <span id="year"></span> Nova Coin (NVC) • novacoin.finance
-    <div class="mini" style="margin-top:6px">BNB Smart Chain • Contract: 0x5030113a535f6b94420D34AEf7cfb22e5547210e</div>
   </footer>
 
   <script>
-    // Constants
-    const CONTRACT = "0x5030113a535f6b94420D34AEf7cfb22e5547210e";
-    const SYMBOL = "NVC";
-    const DECIMALS = 18;
-
-    // Copy contract
-    document.getElementById('copyBtn').addEventListener('click', function(){
-      const txt = document.getElementById('contractAddress').innerText.trim();
+    // Copy contract address (About section)
+    document.getElementById('copyBtn')?.addEventListener('click', function(){
+      const txt = document.getElementById('addr').innerText.trim();
       navigator.clipboard.writeText(txt).then(()=>{
         this.textContent = 'Copied';
         setTimeout(()=> this.textContent = 'Copy', 1200);
       });
     });
-
-    // Add to MetaMask (works on EVM wallets that support wallet_watchAsset)
-    document.getElementById('addToWallet').addEventListener('click', async () => {
-      if (!window.ethereum) {
-        alert('Wallet not detected. Please open with MetaMask or a compatible wallet.');
-        return;
-      }
-      try {
-        await window.ethereum.request({
-          method: 'wallet_watchAsset',
-          params: {
-            type: 'ERC20',
-            options: {
-              address: CONTRACT,
-              symbol: SYMBOL,
-              decimals: DECIMALS,
-              image: location.origin + '/assets/logo.png'
-            }
-          }
-        });
-      } catch (e) {
-        console.error(e);
-        alert('Unable to add token. Please add manually in your wallet.');
-      }
-    });
-
     // Dynamic year
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
