@@ -213,22 +213,30 @@
     </div>
   </main>
 
-  <section id="about" class="container">
-    <div class="card">
-      <h3 style="margin-top:0">What is Nova Coin?</h3>
-      <p class="muted">
-        NVC aims to be a lean, transparent token with real-world-oriented utilities and simple governance.
-        The initial focus is on building a trustworthy brand, launching fairly, and shipping tools the community actually uses.
-      </p>
-      <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:10px">
-        <span class="copy" title="(placeholder) contract address">
-          <span id="addr">0x0000000000000000000000000000000000000000</span>
-          <button id="copyBtn" class="btn btn-outline" style="padding:8px 10px; font-size:12px">Copy</button>
-        </span>
-        <span class="mini">Contract will appear here once deployed.</span>
-      </div>
+<section id="about" class="container">
+  <div class="card">
+    <h3 style="margin-top:0">What is Nova Coin?</h3>
+    <p class="muted">
+      NVC aims to be a lean, transparent token with real-world-oriented utilities and simple governance. 
+      The initial focus is on building a trustworthy brand, launching fairly, and shipping tools the community actually uses.
+    </p>
+
+    <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:10px">
+      <strong>Contract:</strong>
+      <span id="contractAddress">0x5030113a535f6b94420D34AEf7cfb22e5547210e</span>
+      <button onclick="copyAddress()">Copy</button>
     </div>
-  </section>
+  </div>
+
+  <script>
+    function copyAddress() {
+      const address = document.getElementById("contractAddress").innerText;
+      navigator.clipboard.writeText(address).then(() => {
+        alert("Contract address copied: " + address);
+      });
+    }
+  </script>
+</section>
 
   <section id="tokenomics" class="container">
     <div class="card tokenomics">
